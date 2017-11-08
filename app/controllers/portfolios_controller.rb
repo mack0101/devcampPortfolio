@@ -12,7 +12,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to @portfolio_item, notice: "Post was successful." }
+        format.html { redirect_to portfolios_path, notice: "Post was successful." }
       else
         format.html{ render :new }
       end
